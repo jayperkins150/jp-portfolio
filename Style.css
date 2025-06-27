@@ -83,11 +83,11 @@ footer {
 }
 
 .flex-container > div {
-  margin: 10px;
-  padding: 10px;
+  margin: 0px;
+  padding: 20px;
   font-size: 30px;
   min-height: 360px;
-  min-width: 580px;
+  min-width: 480px;
 }
 
 iframe {
@@ -99,7 +99,6 @@ iframe {
   left: 0;
   bottom: 0;
   right: 0;
-  margin: 50px 0px 0px 0px;
 }
 
 i {
@@ -200,7 +199,7 @@ img {
 }
 
 .flex-container img {
-  width: 480px;
+  width: 680px;
 }
 
 @media screen and (min-width: 800px) {
@@ -214,7 +213,7 @@ img {
     display: none;
   }
   .flex-container {
-    flex-direction: column;
+    flex-direction: row;
   }
 }
 
