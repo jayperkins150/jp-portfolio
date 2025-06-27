@@ -35,7 +35,7 @@ section {
   box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(255,255,255,0.1), inset -0.2em -0.2em 0.2em 0 rgba(0,0,0,0.1);
 	border-radius: 100px 100px;
   flex-wrap: wrap;
-  padding: 30px;
+  padding: 50px;
 }
 
 .spacer {
@@ -217,6 +217,11 @@ img {
   }
 }
 
+.mobileBubble {
+  position: relative;
+}
+
+
 /* Home background elements */
 
 .background {
@@ -243,6 +248,7 @@ img {
     position: absolute;
     top: 44%;
 }
+
 
 /* Home coloured block elements */
 
@@ -487,8 +493,4 @@ button {
   margin: 8px 0;
   border-radius: 10px;
   border: 2px solid white;
-}
-
-.mobileBubble {
-  position: relative;
 }
