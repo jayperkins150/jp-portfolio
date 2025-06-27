@@ -5,17 +5,20 @@
 	color: #fffdd0;
 }
 
+nav {
+  display: block;
+}
+
 section {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	position: relative;
-	padding: 40px 20px 40px 20px;
 	border-style: dotted;
 	border-color: #fffdd0;
 	border-width: 5px;
 	border-radius: 100px 100px;
-	max-width: 60%;
+  padding: 6%;
 	margin: auto;
 }
 
@@ -26,18 +29,17 @@ section {
   align-content: center;
 	text-align: center;
   position: relative;
-	border-style: dotted;
-	border-color: #fffdd0;
-	border-width: 5px;
+  border-width: 1px;
+  border-style: dotted;
+  border-color: #d1635d;
+  box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(255,255,255,0.1), inset -0.2em -0.2em 0.2em 0 rgba(0,0,0,0.1);
 	border-radius: 100px 100px;
-  min-height: 300px;
   flex-wrap: wrap;
-  margin: auto;
-  min-width: 90%;
+  padding: 30px;
 }
 
 .spacer {
-  min-height: 160px;
+  min-height: 50px;
   position: relative;
 }
 
@@ -48,14 +50,56 @@ section {
 }
 
 footer {
-  position: absolute;
-  bottom: -105%;
+  position: relative;
+  display: block;
   width: 100%;
   z-index: 1000;
-  background-color: #0a1e42;
+  top: 100%;
+  margin-top: 170px;
+  background-color: #081630;
   color: white;
   text-align: center;
-  padding: 30px 0;
+  padding: 30px;
+}
+
+.flex-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-container {
+  position: relative;
+  width: 100%;
+  padding-top: 10%;
+  display: flex;
+  justify-content: center;
+	align-items: flex-start;
+  align-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0;
+  max-width: 100%;
+  padding: 0px;
+}
+
+.flex-container > div {
+  margin: 10px;
+  padding: 10px;
+  font-size: 30px;
+  min-height: 360px;
+  min-width: 580px;
+}
+
+iframe {
+  position: relative;
+  width: 415px;
+  height: 208px;
+  border: none;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: 50px 0px 0px 0px;
 }
 
 i {
@@ -71,16 +115,16 @@ h1 {
   font-style: normal;
 	line-height: 110%;
 	color: #48140d;
-	padding: 0px 40px 40px 40px;
+	padding: 40px 40px 40px 40px;
   display: block;
 }
 
 h2 {
-	font-size: 30px;
+	font-size: 40px;
 	font-family: "Shrikhand", serif;
 	font-weight: 400;
   font-style: normal;
-  line-height: 100%;
+  line-height: 110%;
 	color: rgb(255, 87, 51);
 	padding: 150px 40px 40px 40px;
   display: block;
@@ -100,8 +144,9 @@ p2 {
 	font-weight: regular;
   font-style: heavy;
 	line-height: 120%;
-	vertical-align: text-top;
 	color: #fffdd0;
+  display: block;
+  text-align: center;
 }
 
 ul {
@@ -128,44 +173,48 @@ a {
 
 #home-button {
   position: absolute;
-  padding: 15px 15px 15px;
-  margin: 76px;
+  margin: 6% 6% 6% 6%;
   z-index: 15;
-  top: 7%;
-  left: 3%;
+  top: 2%;
   opacity: .15;
 }
 
-.intro {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	vertical-align: middle;
-	text-align: left;
-	flex-direction: column;
-	word-wrap: break-word;
-	max-width: 900px;
-	left: 25%;
-	right: 22%;
-	padding: 0% 15.5% 0% 15.5%; 
-}
-
 .mobileBubble {
+  position: relative;
 }
 
 .desktopBubble {
+  position: relative;
 }
 
+img {
+  position: relative;
+}
 
-@media screen and (min-width: 600px) {
+.logos {
+  padding: 5%;
+  margin: auto;
+  display: block;
+  justify-content: center;
+  width: 60px;
+}
+
+.flex-container img {
+  width: 480px;
+}
+
+@media screen and (min-width: 800px) {
   .spacer, .mobileBubble {
     display: none;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .spacer2, .desktopBubble {
     display: none;
+  }
+  .flex-container {
+    flex-direction: column;
   }
 }
 
@@ -187,30 +236,32 @@ a {
 
 #Hometitle {
     position: absolute;
-    top: 39%;
+    top: 34%;
+    padding: 0px 40px 0px 40px;
 }
 
 #Homesubtitle {
     position: absolute;
-    top: 49%;
+    top: 44%;
 }
 
 /* Home coloured block elements */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .mySidenav, .mySidenav2, .mySidenav3, .mySidenav4 {
     display: none;
   }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
   .myMobilenav, .myMobilenav2, .myMobilenav3, .myMobilenav4 {
     display: none;
   }
 }
 
 .myMobilenav a {
-  position: absolute;
+  position: relative;
+  display: block;
   top: 100%;
   padding: 10px;
   width: 100%;
@@ -218,7 +269,6 @@ a {
   z-index: 9;
   text-decoration: none;
   text-align: center;
-  vertical-align: text-bottom;
   writing-mode: horizontal-tb;
   font-size: 10px;
 	font-family: "Gabarito", serif;
@@ -231,7 +281,8 @@ a {
 }
 
 .myMobilenav2 a {
-  position: absolute;
+  position: relative;
+  display: block;
   top: 120%;
   padding: 10px;
   width: 100%;
@@ -239,7 +290,6 @@ a {
   z-index: 8;
   text-decoration: none;
   text-align: center;
-  vertical-align: text-bottom;
   writing-mode: horizontal-tb;
   font-size: 10px;
 	font-family: "Gabarito", serif;
@@ -252,7 +302,8 @@ a {
 }
 
 .myMobilenav3 a {
-  position: absolute;
+  position: relative;
+  display: block;
   top: 160%;
   padding: 10px;
   width: 100%;
@@ -260,20 +311,20 @@ a {
   z-index: 8;
   text-decoration: none;
   text-align: center;
-  vertical-align: text-bottom;
   writing-mode: horizontal-tb;
   font-size: 10px;
 	font-family: "Gabarito", serif;
 	font-weight: 50;
   font-style: thin;
   color: #fffdd0;
-  background-color: #ffd000;
+  background-color: #f7c900;
   border-radius: 0 0 0 0;
   rotate: 0deg;
 }
 
 .myMobilenav4 a {
-  position: absolute;
+  position: relative;
+  display: block;
   top: 140%;
   padding: 10px;
   width: 100%;
@@ -281,7 +332,6 @@ a {
   z-index: 8;
   text-decoration: none;
   text-align: center;
-  vertical-align: text-bottom;
   writing-mode: horizontal-tb;
   font-size: 10px;
 	font-family: "Gabarito", serif;
@@ -298,7 +348,7 @@ a {
   left: -94%;
   top: 0px;
   transition: 0.5s;
-  padding: 30px;
+  padding: 4%;
   width: 100%;
   height: 100%;
   text-decoration: none;
@@ -316,22 +366,12 @@ a {
   transition-delay: 2s;
 }
 
-.mySidenav a:active {
-  left: 0;
-  background-color: #fffdd0;
-  z-index: 10;
-}
-
-#About {
-  top: 0px;
-}
-
 .mySidenav2 a {
   position: absolute;
   top: -88%;
   left: -6%;
   transition: 0.5s;
-  padding: 30px;
+  padding: 0%;
   width: 100%;
   height: 100%;
   z-index: 8;
@@ -350,20 +390,13 @@ a {
   transition-delay: 2s;
 }
 
-.mySidenav2 a:active {
-  z-index: 8;
-  left: 0px;
-  background-color: #fbd1d3;
-}
-
-#Services {
-}
-
 .mySidenav3 a {
   position: absolute;
+  display: block;
   top: 88%;
+  display: block;
   transition: 0.5s;
-  padding: 30px;
+  padding: 1.6%;
   width: 100%;
   height: 100%;
   z-index: 4;
@@ -374,14 +407,9 @@ a {
 	font-weight: 50;
   font-style: thin;
   color: #fffdd0;
-  background-color: #ffd000;
+  background-color: #f7c900;
   border-radius: 0 0 0 0;
   transition-delay: 2s;
-}
-
-.mySidenav3 a:active {
-  z-index: 8;
-  background-color: #Fce570;
 }
 
 #Contact {
@@ -392,7 +420,7 @@ a {
   position: absolute;
   right: -94%;
   transition: 0.5s;
-  padding: 30px;
+  padding: 4%;
   width: 100%;
   height: 100%;
   text-decoration: none;
@@ -411,14 +439,6 @@ a {
   transition-delay: s;
 }
 
-.mySidenav4 a:active {
-  z-index: 8;
-  background-color: #ffc983;
-}
-
-#Socials {
-}
-
 body {
   background-color: #f7f0c0;
   overflow-x: hidden;
@@ -435,68 +455,41 @@ input[type=text] {
   border: 2px solid white;
   border-radius: 4px;
   font-size: 15px;
+  font-family: "Gabarito", serif;
   background-color: white;
   color: grey;
 }
 
 textarea {
   width: 100%;
+  height: 200px;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
   border: 2px solid white;
   border-radius: 4px;
   font-size: 15px;
+  font-family: "Gabarito", serif;
   background-color: white;
   color: grey;
 }
 
 form {
   font-size: 18px;
+  font-family: "Gabarito", serif;
 }
 
 button {
   background-color: white;
-  font-weight: bold;
+  font-family: "Gabarito", serif;
+  font-size: 20px;
   color: #895129;
   padding: 12px 20px;
   margin: 8px 0;
-  border-radius: 4px;
+  border-radius: 10px;
+  border: 2px solid white;
 }
 
 .mobileBubble {
-
-}
-
-
-/* Gallery elements */
-
-#gallery {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	width: 75vw;
-	margin: 20px auto;
-	}
-
-div.gallery {
-  margin: 5px;
-  border: 1px solid #ccc;
-  float: left;
-  width: 180px;
-}
-
-div.gallery:hover {
-  border: 1px solid #777;
-}
-
-div.gallery img {
-  width: 100%;
-  height: auto;
-}
-
-#desc {
-  padding: 15px;
-  text-align: center;
-  font-size: 18px;
-  color: #fffdd0;
+  position: relative;
 }
