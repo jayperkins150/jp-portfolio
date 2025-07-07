@@ -157,7 +157,7 @@ a {
   position: relative;
   z-index: 15;
   opacity: .2;
-  padding: 2.5%;
+  padding: 0% 0% 2.5% 0%;
   width: 20px;
 }
 
